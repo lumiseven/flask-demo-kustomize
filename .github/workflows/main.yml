@@ -47,4 +47,4 @@ jobs:
         if: ${{ github.event.inputs.image }}
         with:
           github-token: ${{ secrets.CI_TOKEN }}
-          message: "kustomize set image to ${{ github.event.inputs.image }}:${{ github.event.inputs.sha-tag }}"
+          commit-message: "kustomize set image to ${{ github.event.inputs.image }}:${{ github.event.inputs.sha-tag }}"
