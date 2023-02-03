@@ -46,5 +46,5 @@ jobs:
         uses: github-actions-x/commit@v2.9
         if: ${{ github.event.inputs.image }}
         with:
-          github-token: ${{ secrets.CI_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "kustomize set image to ${{ github.event.inputs.image }}:${{ github.event.inputs.sha-tag }}"
