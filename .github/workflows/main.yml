@@ -40,6 +40,7 @@ jobs:
           cd secret/
           kustomize edit set image ${{ github.event.inputs.image }}:${{ github.event.inputs.sha-tag }}
           rm -f kustomize
+          cd ../
       
       - name: Git Commit/Push Changes
         uses: actions-x/commit@v2
